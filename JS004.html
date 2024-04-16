@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Functions</title>
+</head>
+<body>
+      <h5>This is the Functions Section</h5>
+      <script>
+            function convert(){
+                  mytext="I really LikE Mind Games like Chess and Sudoku";
+                  var s=mytext.toUpperCase();
+                  console.log(mytext);
+                  console.log(s);
+
+            }
+            convert();
+
+            function Check(){
+                  var number=prompt("Enter the Whole Number");
+                  if(number<10){
+                        console.log("Your Number is Less than 10");
+                  }else if(number>9){
+                        console.log("Your Number is really greater than 9");
+                  }else{
+                        console.log("ERROR: You did not honestly Enter any Number SOB");
+                  }
+            }
+            Check();
+            function Momo(){
+                  console.log("1.Send Money\n2.Withdray Money");
+                  var choice=parseInt(prompt("Enter your choice"));
+                  if(choice===1){
+                        console.log("Money Sent");
+                  }else{
+                        console.log("Money Withdrawn");
+                  }
+            }
+            function up(message){
+                  var x=message.toUpperCase();
+                  console.log(x);
+            }
+            up("Please");
+
+            function sumValues(n1,n2){
+                  var x= n1+n1;
+                  console.log(x);
+            }
+            sumValues(10,20);
+      </script>
+</body> 
+</html> 
