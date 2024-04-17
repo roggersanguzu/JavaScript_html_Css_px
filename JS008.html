@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Capture Events</title>
+</head>
+<body>
+      <h1>WEB PAGE EVENTS</h1>
+      <button>Don't Press Me!</button>
+      <a href="https://github.com/">Link to GITHUB </a>
+      <script>
+            var butt=document.querySelector('button');
+
+            /*First Alternative
+            butt.onclick= function(){
+                  alert("Ouh No Don't Tell me you did it!");
+            }*/
+
+            function cli(){
+                  alert("Ouh No Don't Tell me you did it!");
+            }
+            butt.addEventListener('click', cli);
+
+            //Second Alternative with Event Object
+            /*function cli(event){
+                  event.target.style.backgroundColor=green;
+                  alert("Ouh No Don't Tell me you did it!");
+            }
+            butt.addEventListener('click', cli);*/
+
+            var eVent=document.querySelector('a');
+
+            function eVe(event){
+                  event.preventDefault();
+                  alert("There is actually No GitHub For you");
+            }
+            eVent.addEventListener('click', eVe);
+      </script>
+</body>
+</html>

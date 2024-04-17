@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Events</title>
+      <style>
+            .k{
+                  background-color: red;
+                  color: white;
+            }
+      </style>
+</head>
+<body>
+      <form method="get" action="processor.php">
+            <label for="">Name:
+                  <input type="text" required>
+            </label>
+            <input type="submit">
+            <button>Chessman</button>
+      </form>
+      <script>
+            var myForm=document.querySelector('form');
+            myForm.addEventListener('submit',function(e){
+                  e.preventDefault();
+                  var myFormData=document.querySelector('input').value;
+                  alert("Succeeful Submission").className=k;
+            });
+            var myButton=document.querySelector('button');
+            function mBut(event){
+                  event.preventDefault();
+                  alert("You are Really a good and Complicated Client!");
+            }
+            myButton.addEventListener('click',mBut);
+      </script>
+</body>
+</html>
