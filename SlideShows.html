@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Slide Shows</title>
+</head>
+<body>
+      <h1>Welcome to the JavaScript Slide Shows</h1>
+      <div>
+            <img src="Ax.webp" alt="Slide shows" id="myimage" style="height: 40px ;width: 40px; display: inline;">
+      </div>
+      <p>
+            <a href="#" id="prev">Previous</a>--- <a href="#" id="next">Next</a>
+      </p>
+      
+      <script>/*
+            //Option One
+            var images=["Ax.webp", "Photi.jpg","Pho.jpg"];
+            var currentImage=0;
+            document.getElementById('next').onclick=nextPhoto;
+            function nextPhoto(){
+                  currentImage++;
+                  if(currentImage>images.length-1){
+                        currentImage=0;
+                  }
+                  document.getElementById("myimage").src=images[currentImage];
+            };*/
+
+            //Option NEXT
+             var images=["Ax.webp", "Photi.jpg","Pho.jpg"];
+             var initial=0;
+             var x=document.getElementById('next');
+             x.addEventListener("click",function(){
+                  initial++;
+                  if(initial>images.length-1){
+                        initial=0;
+                  }
+                  document.getElementById("myimage").src=images[initial];
+             });
+             //Previous
+             const y=document.getElementById('prev');
+             y.addEventListener("click",function(){
+                  initial--;
+                  if(initial<0){
+                        initial=images.length-1;
+                  }
+                  document.getElementById("myimage").src=images[initial];
+             });
+      </script>
+</body>
+</html>
