@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Body Functions/Scroll Elements</title>
+      <style>
+            div{
+                  background-color: red;
+                  height: 500px;
+                  width: 100px;
+            }
+      </style>
+</head>
+<body>
+      <h1>Managing the Scrolls </h1>
+      <h2>Resizing the Windows</h2>
+      <h3>Key Down Event</h3>
+      <p>
+            This Deals with the KeyDowns
+      </p>
+      <div></div>
+      <script>
+            var pagetop;
+            window.addEventListener("scroll", function(){
+                  pagetop=window.pageXOffset;
+                  console.log(pagetop);
+            });
+            window.addEventListener("resize", function(){
+                  console.log(`Page Width is ${window.innerWidth}`);
+                  console.log(`Page Width is ${window.innerHeight}`);
+            });
+            /*
+            document.addEventListener('keydown',function(){
+                  alert('A Key has been Pressed');
+                  alert('Stop tapping Our Keyboard Please , you might delete some essetial Infromation');
+            });*/
+            document.addEventListener('keydown',function(eVent){
+                  alert(`The ${eVent.key} Key has Been Pressed`);
+            });
+
+      </script>
+</body>
+</html>
