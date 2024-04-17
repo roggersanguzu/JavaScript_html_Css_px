@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Global and Private</title>
+</head>
+<body>
+      <h1>Testing Scope in JavaScript</h1>
+      <p>This Deals with the KeyDowns</p>
+      <p>This Deals with the KeyUps</p>
+      <p>This Deals with the Cheers</p>
+      <p>This Deals with the KeyDowns</p>
+      <script>
+            "use strict";
+            var aVariable = "This is a Global Variable";
+            console.log(aVariable);
+
+            //N.B When a variable is written without var / let in the Function,it the becomes the global variable
+            function sCope(){
+                  var aVariable = "This is a Local Variable";
+                  console.log(aVariable);
+            }
+            sCope();
+
+            var x=document.querySelector('h1');
+            x.addEventListener('mouseover', function() {
+                  x.innerHTML = 'This is a Global Variable';
+            });
+            x.addEventListener('mouseout', function(){
+                  x.innerHTML = 'Relax My Brother';
+            });
+
+            var ps=document.querySelectorAll('p');
+            for(var i=0;i<ps.length;i++){
+                  ps[i].style.color='green';
+            }
+      </script>
+</body> 
+</html>
