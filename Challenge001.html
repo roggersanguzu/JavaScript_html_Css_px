@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+
+      <p id="paragraph">Here is a paragraph</p>
+      <div id="main">
+            <p>Change this paragraph</p>
+            <p>Change this paragraph Too</p>
+            <p>Change this paragraph Also</p>
+      </div>
+      <nav>
+            <a href="https://www.google.com/">Google</a>
+            <ul>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Twitter</a></li>
+                  <li><a href="#">Linkedin</a></li>
+                  <li><a href="#">Telegram</a></li>
+            </ul>
+      </nav>
+      <script>
+            const x=document.getElementById("paragraph");
+            x.style.fontSize="24px";
+
+            const a=document.getElementById("main");
+            a.style.fontSize="24px";
+            a.style.color="red";
+
+            let y=document.getElementsByTagName("li");
+            for(let i=0; i<y.length; i++){
+                  y[i].addEventListener('click',function(e) {
+                  e.preventDefault();
+                  alert("You have Clicked me!!");
+            });
+            }
+      </script>
+</body>
+</html>
