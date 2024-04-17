@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            .blue{
+                  color: blue;
+            }
+      </style>
+</head>
+<body>
+      <div id="specia">
+            <button class="someclass">First Option</button>
+            <button class="someclass">Second Option</button>
+            <button class="someclass">Last Option</button>
+      </div>
+
+      <div id="chess">
+            <p>C++ - Programming Language</p>
+            <p>C - Programming Language</p>
+            <p>C# - Programming Language</p>
+            <p>Java - Programming Language</p>
+      </div>
+      <script>
+             var a=document.querySelector('#specia .someclass');
+                  a.style.color="yellow";
+
+                  var tx=document.querySelectorAll('#special s');
+                  for(var i=0;i<tx.length;i++){
+                        tx[i].style.color="purple";
+                  }
+                  /*
+            //PROPERTIES
+            var x=document.getElementById('chess');
+            x.innerHTML = "<p>I really Love Python and JavaScript more than the Listed Ones</p>";
+            //This is used to replace elements in the Paragraph with this One.*/
+            var y=document.querySelector('p');
+            y.className="blue";
+      </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Form Dealings</title>
+</head>
+<body>
+      <form action="php.send">
+            <label for="check">
+                  <input type="checkbox">Yes!
+            </label>
+      </form>
+      <div>
+            <p>First Paragraph</p>
+            <p>Last Paragraph</p>
+      </div>
+      <script>
+            var box=document.querySelector('input');
+            box.setAttribute('checked', 'checked');
+
+            var myDiv=document.querySelector('div'); //This is used to remove items
+            myDiv.removeChild(myDiv.children[0]);
+      </script>
+</body>
+</html>
