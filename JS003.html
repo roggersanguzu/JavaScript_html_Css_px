@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Molulus</title>
+</head>
+<body>
+      <h6>Working with the Modulus</h6>
+      <script>
+            var food=['Mandazi','Chapati','Donats','Ugali'];
+            var str="I am Craving for " ;
+            //Here i was trying to Check for the Index that are really Even Numbers to Change them tO Uppercase.
+            for(let i=0;i<food.length;i++){
+                  var remainder=i%2;
+                  if(remainder===0){
+                        var uppe=food[i].toUpperCase();
+                        console.log(`${str} ${uppe}`);// Please Take Care.
+                  }else{
+                        var x=food[i].toLowerCase();
+                        console.log(`${str} ${x}`);
+                        //Here was conversion of the items to upper and Lower case Respectively.
+                  }
+            }
+      </script>
+</body>
+</html>
