@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Distance Converter</title>
+      <style>
+            body {
+                  background-color: #C65BCF;
+                  text-align: center;
+            }
+            h1 {
+                  color: white;
+                  font-family: Arial, Helvetica, sans-serif;
+            }
+            p {
+                  font-family: Arial, Helvetica, sans-serif;
+            }
+            .container {
+                  border-radius: 10px;
+                  margin: 30px;
+                  background-color: #874CCC;
+                  height: 400px;
+                  padding-top: 30px;
+                  border-radius: 30px;
+            }
+            #x {
+                  color: white;
+                  width: 70px;
+                  border-radius: 10px;
+                  text-decoration: none;
+                  background-color: #C65BCF;
+                  transition: background-color 0.5s;
+            }
+            #x:hover {
+                  color: #C65BCF;
+                  background-color: white;
+                  cursor: pointer;
+            }
+            input {
+                  cursor: pointer;
+            }
+            input:hover {
+                  color: white;
+                  background-color: #C65BCF;
+            }
+            h2 {
+                  background-color: #10439F;
+                  text-align: center;
+                  color: white;
+                  height: 30px;
+                  width: 400px;
+                  border-radius: 20px;
+                  margin: 0 auto;
+                  font-family: Arial, Helvetica, sans-serif;
+                  font-size: 15px;
+                  line-height: 30px;
+                  margin-top: 50px;
+                  padding: 0;
+            }
+      </style>
+</head>
+<body>
+      <div class="container">
+            <h1>Miles to Kilometers Converter</h1>
+            <p>Type in the Distance in Km to Convert and Click the Button to Convert</p>
+            <form id="convert-form">
+                  <input type="number" required placeholder="Distance in Km" id="distance">
+                  <button type="submit" id="convert-button">Convert</button>
+            </form>
+            <h2 id="answer">Answer Panel</h2>
+      </div>
+
+      <script>
+            document.getElementById('convert-form').addEventListener('submit', function(event) {
+                  event.preventDefault();
+                  var checkDistance = parseFloat(document.getElementById('distance').value);
+                  if (!isNaN(checkDistance)) {
+                        var convertedDistance = (checkDistance * 100000).toFixed(3);
+                        var answerElement = document.getElementById('answer');
+                        answerElement.innerHTML = `<h2>${checkDistance} Km converts to ${convertedDistance} meters</h2>`;
+                  } else {
+                        alert('Please enter a valid distance');
+                  }
+            });
+      </script>
+</body>
+</html>
