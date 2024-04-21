@@ -1,0 +1,196 @@
+body{
+      background-color: #E3F2FD;
+}
+:root{
+      --radius-main:5px;
+      --padding-main:3px;
+}
+.container{
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: 1fr 2fr 1fr 1fr 1fr;
+      grid-template-areas:
+      "nav nav nav" "side main main" "side skills skills" "side client client" "side footer footer";
+      grid-gap: 5px;
+}
+nav{
+      background-color:  #007BFF;
+      color: white;
+      border-radius: var(--radius-main);
+      padding: var(--padding-main);
+      grid-area: nav;
+      padding-top: 30px;
+      cursor: pointer;
+      padding-bottom: 20px;
+      transition: background-color 0.6s;
+}
+nav:hover{
+      background-color: rgb(178, 78, 78);
+}
+ul{
+      display: inline;
+      font-size: bold;
+      margin-left: 10px;
+      cursor: pointer;
+      transition: font-size 0.6s;
+}
+ul:hover{
+      font-size: x-large
+}
+main{
+      background-color: #8FCAC7;
+      color: black;
+      border-radius: var(--radius-main);
+      padding: var(--padding-main);
+      grid-area: main;
+      background-image: url(Web2.jpg);
+      background-size: cover;
+      height: 200px;
+      cursor: pointer;
+}
+main:hover{
+      box-shadow: 2px 2px 5px black;
+}
+.side{
+      background-color:#375E97;
+      color: white;
+      border-radius: var(--radius-main);
+      padding: var(--padding-main);
+      grid-area: side;
+      cursor: pointer;
+      transition: background-color 0.6s;
+}
+.side:hover{
+      background-color: #4dc38e;
+      box-shadow: 2px 2px 5px black;
+}
+img{
+      height: 150px;
+      width: 150px;
+      align-self: center;
+      border-radius: 200px;
+      margin-left: 60px;
+      margin-top: 20px;
+      animation: moveImage 3s infinite;
+}
+@keyframes moveImage {
+    0% { transform: translateX(0px); } 
+    50% { transform: translateX(50px); }
+    100% { transform: translateX(0px); }
+}
+.skills{
+      background-color: #6A0DAD;
+      color: white;
+      border-radius: var(--radius-main);
+      padding: var(--padding-main);
+      grid-area: skills;
+      cursor: pointer;
+}
+.skills:hover{
+      background-color: #800080;
+      box-shadow: 2px 2px 5px black;
+}
+.client{
+      background-color: #FFD966;
+      border-radius: var(--radius-main);
+      padding: var(--padding-main);
+      grid-area: client;
+      background-image: url(Back2.jpg);
+      color: white;
+      transition: background-color 0.6s;
+}
+.client:hover{
+      box-shadow: 2px 2px 5px black;
+}
+footer{
+      background-color: #556B2F;
+      color: white;
+      border-radius: var(--radius-main);
+      padding: var(--padding-main);
+      grid-area: footer;
+      cursor: pointer;
+      transition: background-color 0.6s;
+}
+.footer:hover{
+      box-shadow: 2px 2px 5px black;
+}
+.butto{
+      margin-left: 30px;
+      margin-top: 10px;
+      cursor: pointer;
+}
+.social{
+      text-align: center;
+      color: black;
+      display:block;
+      cursor: pointer;
+}
+.a{
+      color: white;
+      background-color: black;
+      width: 100px;
+}
+.b, .c, .d,.e{
+      width: 150px;
+      display: block;
+      margin-left: 80px;
+      margin-top: 15px;
+      border-radius: 20px;
+      height: 25px;
+      cursor: pointer;
+      color: white;
+}
+.b{
+      background-color: rgb(34, 34, 201);
+      transition: background-color 0.6s;
+}
+.b:hover{
+      color: rgb(49, 49, 187);
+      background-color: white;
+}
+.c{
+      background-color: rgb(0, 187, 255);
+      transition: background-color 0.6s;
+}
+.c:hover{
+      color:rgb(0, 187, 255);
+      background-color: white;
+}
+.d{
+      background-color: black;
+      transition: background-color 0.6s;
+}
+.d:hover{
+      color:black;
+      background-color: white;
+}
+.e{
+      background-color: rgb(193, 52, 31);
+      transition: background-color 0.6s;
+}
+.e:hover{
+      color:rgb(193, 52, 31);
+      background-color: white;
+}
+span{
+      text-decoration: underline red;
+      color: #007BFF;
+}
+.ol{
+      text-align: center;
+      margin-right: 30px;
+}
+@media only screen and (min-width:550x){
+      .container{
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 2fr 2fr 1fr 1fr;
+            grid-template-areas: 
+            "nav"
+            "side"
+            "main"
+            "skills"
+            "client"
+            "footer";
+      }
+}

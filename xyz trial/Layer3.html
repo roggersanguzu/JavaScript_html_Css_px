@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            :root{
+                  --radius-main:5px;
+                  --padding-main:5px;
+            }
+            .container {
+                  height: 100vh;
+                  display: grid;
+                  grid-template-columns: 1fr 2fr 1fr 1fr;
+                  grid-template-rows: 1fr 2fr 1fr 1fr 1fr 1fr;
+                  grid-gap:4px;
+                  grid-template-areas:
+                  "nav nav nav nav"
+                  "side main main main"
+                  "side s1 s2 s2 "
+                  "side s3 s3 s3"
+                  "s4 s4 s4 s4"
+                  "s5 s5 s5 s5";
+            }
+            nav{
+                  background-color:rgb(32, 20, 20);
+                  padding: var(--padding-main);
+                  border-radius: var(--radius-main);
+                  grid-area: nav;
+                  text-align: center;
+                  padding-top: 20px;
+                  color: white;
+                  font-size: larger;
+            }
+            main{
+                  background-color:blue;
+                  padding: var(--padding-main);
+                  border-radius: var(--radius-main);
+                  grid-area: main;
+            }
+            .side{
+                  background-color: rgb(214, 123, 138);
+                  padding: var(--padding-main);
+                  border-radius: var(--radius-main);
+                  grid-area: side;
+                  color: white;
+            }
+            .s1{
+                  background-color: black;
+                  padding: var(--padding-main);
+                  border-radius: var(--radius-main);
+                  grid-area: s1;
+                  transition: background-color 0.7s;
+            }
+            .s1:hover{
+                  box-shadow: 5px 5px 5px black;
+            }
+            .s2{
+                  background-color: grey;
+                  padding: var(--padding-main);
+                  border-radius: var(--radius-main);
+                  grid-area: s2;
+            }
+            .s3{
+                  background-color: darkolivegreen;
+                  padding: var(--padding-main);
+                  border-radius: var(--radius-main);
+                  grid-area: s3;
+                  color: white;
+                  
+            }
+            .s4{
+                  background-color: goldenrod;
+                  padding: var(--padding-main);
+                  border-radius: var(--radius-main);
+                  grid-area: s4;
+                  text-align: center;
+            }
+            .s5{
+                  background-color: green;
+                  padding: var(--padding-main);
+                  border-radius: var(--radius-main);
+                  grid-area: s5;
+                  text-align: center;
+            }
+            .s6{
+                  background-color: blueviolet;
+                  padding: var(--padding-main);
+                  border-radius: var(--radius-main);
+                  grid-area: s6;
+            }
+            ul{
+                  display: inline;
+                  margin-left: 60px;
+            }
+            @media only screen and (max-width: 700px){
+                  .container{
+                        grid-template-columns: 1fr;
+                        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+                        grid-template-areas: 
+                        "nav"
+                        "main"
+                        "side"
+                        "s1"
+                        "s2"
+                        "s5";
+                  }
+            }
+            p{
+                  color: white;
+                  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            h4{
+                  color: black;
+                  font-size: large;
+                  padding-left: 10px;
+                  display: inline;
+            }
+            .fb{
+                  margin-bottom: 10px;
+                  margin-top: 10px;
+                  background-color: white;
+                  color: blue;
+                  margin-left: 40px;
+                  text-align: center;
+                  border-radius: 10px;
+                  height: 30px;
+                  width: 150px;
+                  transition: background-color 0.7s;
+            }
+            .fb:hover{
+                  cursor: pointer;
+                  background-color: blue;
+                  color: white;
+                  font-size: larger;
+            }
+            .twi{
+                  margin-bottom: 10px;
+                  margin-top: 10px;
+                  background-color: rgb(49, 49, 187);
+                  color: white;
+                  margin-left: 40px;
+                  text-align: center;
+                  border-radius: 10px;
+                  height: 30px;
+                  width: 150px;
+                  box-shadow: 5px 5px 7px black;
+                  transition: background-color 0.7s;
+            }
+            .twi:hover{
+                  cursor: pointer;
+                  background-color: white;
+                  color: blue;
+                  font-size: larger;
+            }
+            .li{
+                  margin-bottom: 10px;
+                  margin-top: 10px;
+                  background-color: rgb(90, 90, 218);
+                  color: white;
+                  margin-left: 40px;
+                  text-align: center;
+                  border-radius: 10px;
+                  height: 30px;
+                  width: 150px;
+                  transition: background-color 0.7s;
+            }
+            .li:hover{
+                  cursor: pointer;
+                  background-color: white;
+                  color: rgb(90, 90, 218);
+                  font-size: larger;
+            }
+            .wha{
+                  margin-bottom: 10px;
+                  margin-top: 10px;
+                  background-color: rgb(49, 187, 127);
+                  color: white;
+                  margin-left: 40px;
+                  text-align: center;
+                  border-radius: 10px;
+                  height: 30px;
+                  width: 150px;
+                  transition: background-color 0.7s;
+            }
+            .wha:hover{
+                  cursor: pointer;
+                  background-color: white;
+                  color: rgb(49, 187, 127);
+                  font-size: larger;
+            }
+            .pin{
+                  margin-bottom: 10px;
+                  margin-top: 10px;
+                  background-color: rgb(181, 47, 47);
+                  color: white;
+                  margin-left: 40px;
+                  text-align: center;
+                  border-radius: 10px;
+                  height: 30px;
+                  width: 150px;
+                  transition: background-color 0.7s;
+            }
+            .pin:hover{
+                  cursor: pointer;
+                  background-color: white;
+                  color: rgb(181, 47, 47);
+                  font-size: larger;
+            }
+            .tel{
+                  margin-bottom: 10px;
+                  margin-top: 10px;
+                  background-color: rgb(49, 49, 187);
+                  color: white;
+                  margin-left: 40px;
+                  text-align: center;
+                  border-radius: 10px;
+                  height: 30px;
+                  width: 150px;
+                  transition: background-color 0.7s;
+            }
+            .tel:hover{
+                  cursor: pointer;
+                  background-color: white;
+                  color: rgb(49, 49, 187);
+                  font-size: larger;
+            }
+            img{
+                  height: 50px;
+                  width: 70px;
+                  float: left;
+                  border-radius: 20px;
+            }
+            .s2{
+                  color: white;
+                  background-color: brown;
+            }
+            span{
+                  color: red;
+                  text-decoration: underline;
+            }
+            span:hover{
+                  cursor: pointer;
+                  color: aquamarine;
+            }
+      </style>
+</head>
+<body>
+      <div class="container">
+            <nav>
+                  <ul>Home</ul>
+                  <ul>About</ul>
+                  <ul>Location</ul>
+                  <ul>Courses</ul>
+                  <ul>Concentration</ul>
+                  <ul>Funders</ul>
+            </nav>
+            <main>
+                  <p>
+                        Computer Science and Cybersecurity are two interconnected fields at the forefront of today's digital age, shaping the way we interact with technology and ensuring the safety of our digital infrastructure. <br>
+
+                        Computer Science, as a discipline, encompasses the study of algorithms, data structures, programming languages, and the theoretical foundations of computing. It delves into the design and development of software and systems that power everything from mobile applications to complex databases. Computer Scientists are the architects of the digital world, constantly innovating and pushing the boundaries of what is possible. <br>
+
+                        On the other hand, Cybersecurity focuses on protecting this digital landscape from malicious actors and threats. It involves the implementation of measures to safeguard networks, systems, and data from unauthorized access, theft, or damage. Cybersecurity professionals are tasked with identifying vulnerabilities, devising robust defense strategies, and responding swiftly to security incidents. <br>
+
+                        Together, Computer Science and Cybersecurity form a symbiotic relationship, with advancements in one field often driving progress in the other. As technology continues to evolve, so too do the challenges and opportunities in securing our digital assets. It's a dynamic and ever-changing landscape where innovation and vigilance are paramount. <br>
+                  </p>
+            </main>
+            <div class="side">
+                  <h4>Social Media Platforms</h4>
+                  <div class="but">
+                        <button class="fb">FaceBook</button><br>
+                        <button class="twi">Twitter</button><br>
+                        <button class="li">Linkedin</button><br>
+                        <button class="wha">WhatsApp</button><br>
+                        <button class="tel">Telegram</button><br>
+                        <button class="pin">Pinterest</button><br>
+                  </div>
+            </div>
+            <div class="s1">
+                  <img src="https://static1.s123-cdn-static-a.com/uploads/8008554/2000_64948d3a9af25.jpg" alt="">
+                  <p>
+                        Artificial Intelligence (AI) is revolutionizing how we interact with technology. Through machine learning and deep learning algorithms, AI enables computers to learn from data, recognize patterns, and make decisions without human intervention. From virtual assistants to autonomous vehicles, AI is reshaping industries and paving the way for a more intelligent future.
+                  </p>
+            </div>
+            <div class="s2">
+                  <ul>
+                        <ol>Laziness</ol>
+                        <ol>Limits Human Creativity</ol>
+                        <ol>Job Displacements</ol>
+                        <ol>Automation of Tasks</ol>
+                        <ol>Coding and Intrution Detections</ol>
+                        <ol>Cyber Security</ol>
+                  </ul>
+            </div>
+            <div class="s3">
+                  Artificial Intelligence (AI) plays a crucial role in cybersecurity, both as a tool for defending against cyber threats and as a potential vulnerability that attackers could exploit. In the realm of cybersecurity, AI is utilized in various ways to enhance threat detection, incident response, and overall defense mechanisms. <br>
+
+                  One significant application of AI in cybersecurity is in threat detection and prevention. AI algorithms can analyze vast amounts of data from network traffic, system logs, and user behavior to identify patterns indicative of malicious activities. By continuously learning and adapting to new threats, AI-powered systems can detect and mitigate attacks in real-time, reducing the risk of data breaches and other security incidents. <br>
+
+                  Moreover, AI is instrumental in automating incident response processes. Through the use of AI-driven orchestration and response platforms, organizations can streamline the handling of security incidents, minimizing the time it takes to detect, investigate, and remediate threats. AI-powered systems can also prioritize alerts based on their severity and likelihood of being genuine, enabling security teams to focus their efforts on the most critical issues. <br>
+
+                  However, AI also introduces new challenges and risks to cybersecurity. One concern is the potential for adversarial attacks, where attackers exploit vulnerabilities in AI algorithms to evade detection or manipulate outcomes. Adversarial attacks can involve techniques such as data poisoning, where attackers inject malicious data to manipulate AI models' behavior, or model inversion, where attackers reverse-engineer AI models to extract sensitive information. <br>
+
+                  Furthermore, the reliance on AI for cybersecurity raises questions about accountability and transparency. AI algorithms can sometimes produce results that are difficult to interpret or explain, making it challenging to assess their effectiveness and ensure accountability for decision-making processes. Additionally, the proliferation of AI-driven cybersecurity solutions may exacerbate existing issues related to privacy, data protection, and ethical considerations <br>
+
+                  In summary, while AI offers significant opportunities to strengthen cybersecurity defenses, its adoption also presents new challenges and risks that must be addressed. By leveraging AI responsibly, organizations can enhance their ability to detect and respond to cyber threats effectively while mitigating potential vulnerabilities and ensuring compliance with ethical and regulatory standards.
+            </div>
+            <div class="s4">
+                  <p> We really thank you for Shopping with us ><span>CLICK HERE TO SHOP</span></p>
+            </div>
+            <footer class="s5">
+                  <p>
+                        "For God and My Country"
+                  </p>
+            </footer>
+      </div>
+</body>
+</html>

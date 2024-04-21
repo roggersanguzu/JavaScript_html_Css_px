@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <style>
+                 :root{
+                  --main-radius:5px;
+                  --main-padding:5px;
+                 } 
+                  .container{
+                        display: grid;
+                        height: 100vh;
+                        grid-template-columns:1fr 2fr 1fr 1fr;
+                        grid-template-rows:1fr 2fr 1fr 0.5fr;
+                        grid-template-areas: 
+                        "nav nav nav nav" "side main main main" "side cont1 cont2 cont3" "side footer footer footer";
+                        grid-gap: 0.1cm;
+                        font-family: sans-serif;
+                        font-weight: 800px;
+                        color: coral;
+                  }
+                  nav{
+                        background-color: aqua;
+                        grid-area: nav;
+                        border-radius: var(--main-radius);
+                        padding-top: var(--main-padding);
+                  }
+                  main{
+                        background-color:blue;
+                        grid-area: main;
+                        border-radius: var(--main-radius);
+                        padding-top: var(--main-padding);
+                  }
+                  .side{
+                        background-color: bisque;
+                        grid-area: side;
+                        border-radius: var(--main-radius);
+                        padding-top: var(--main-padding);
+                  }
+                  .cont1{
+                        background-color: brown;
+                        grid-area: cont1;
+                        border-radius: var(--main-radius);
+                        padding-top: var(--main-padding);
+                  }
+                  .cont2{
+                        background-color: aliceblue;
+                        grid-area: cont2;
+                        border-radius: var(--main-radius);
+                        padding-top: var(--main-padding);
+                  }
+                  .cont3{
+                        background-color: yellow;
+                        grid-area: cont3;
+                        border-radius: var(--main-radius);
+                        padding-top: var(--main-padding);
+                  }
+                  footer{
+                        background-color: green;
+                        grid-area: footer;
+                        border-radius: var(--main-radius);
+                        padding-top: var(--main-padding);
+                  }
+
+                  @media only screen and (max-width:550px){
+                        .container{
+                              grid-template-columns: 1fr;
+                              grid-template-rows:0.2fr 0.2fr 0.4fr 0.6fr 0.4fr 0.2fr 0.25fr;
+                              grid-template-areas: "nav"
+                              "slide"
+                              "cont1"
+                              "cont2"
+                              "cont3"
+                              "footer";
+                        }
+                  }
+            </style>
+      </head>
+      <body>
+            <div class="container">
+                  <nav>Navigation</nav>
+                  <main>Main</main>
+                  <div class="side">Side Bar</div>
+                  <div class="cont1">Content One</div>
+                  <div class="cont2">Content Two</div>
+                  <div class="cont3">Content3</div>
+                  <footer>Footer</footer>
+            </div>
+      </body>
+</html>
+
