@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="Vacations.css">
+      </head>
+      <body>
+            <header>
+                  <h1>Vacation Destinations Wish List</h1>
+                  <p>
+                        Found Exciting Places to Visit for Your Vacations?. Use the Form Below to add them to your Wish List
+                  </p>
+            </header>
+            <main>
+                  <form id="destination_detail_form">
+                        <label for="name">Destination  Name</label>
+                        <input type="text" required  id="name" placeholder="Provide name of Description">
+
+                        <label for="location">Destination Location</label>
+                        <input type="text" required id="location" placeholder="Provide the Location">
+
+                        <label for="photo">Photo</label>
+                        <input type="url" required id="photo" placeholder="Photo Url">
+
+                        <label for="description">Destination Description</label>
+                        <textarea name="description" id="" cols="20" rows="5"></textarea>
+                        
+                        <button type="submit" style="width: 200px; height: 30px;margin-left: 30px;">Add to List</button>
+                  </form>
+                  <article>
+                        <h2 id="title">Enter Destination Details</h2>
+                        <div id="destination_container">
+                              <div class="card">
+                                    <img src="image.png" alt="Destination Houses">
+                                    <h3 class="card-body">Destination Name</h3>
+                                    <h4 class="card-body">Destination Location</h4>
+                                    <p class="Card-Text">Destination Description</p>
+                                    <button style="width: 200px; height: 30px;">Remove</button>
+                              </div>
+                        </div>
+                  </article>
+            </main>
+            <script src="Vacation.js"></script>
+      </body>
+</html>
