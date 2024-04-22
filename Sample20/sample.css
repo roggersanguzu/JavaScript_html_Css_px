@@ -1,0 +1,260 @@
+:root{
+      --main-padding:5px;
+      --main-radius:5px;
+}
+.container{
+      display: grid;
+      height: 100vh;
+      grid-gap:6px;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas: 
+      "nav nav nav"
+      "side main main"
+      "side mencloths mencloths"
+      "side ladycloths ladycloths"
+      "footer footer footer";
+      background-color: #8B93FF;
+      cursor: pointer;
+}
+nav{
+      background-color: #074173;
+      padding: var(--main-padding);
+      border-radius: var(--main-radius);
+      grid-area:nav;
+      margin: 0;
+      padding-top: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: larger;
+      background-image: url('back3.jpg');
+      background-size:cover;
+      background-position: center;
+      height: 50px;
+}
+a{
+      color: white;
+      text-decoration: none !important;
+}
+li{
+      display: inline;
+      margin-left: 130px;
+     
+}
+main{
+      grid-area: main;
+      padding: var(--main-padding);
+      border-radius: var(--main-radius);
+      background-image: url(bac4.jpg);  
+}
+.side{
+      grid-area: side;
+      border-radius: var(--main-radius);
+      padding: var(--main-padding);
+      background-color: #1679AB;
+      cursor: pointer;
+}
+.mencloths{
+      grid-area: mencloths;
+      border-radius: var(--main-radius);
+      background-color: #C5FF95;
+      border-radius: var(--main-radius);
+      padding: var(--main-padding);
+}
+.ladycloths{
+      grid-area: ladycloths;
+      border-radius: var(--main-radius);
+      background-color: #41B06E;
+      border-radius: var(--main-radius);
+      padding: var(--main-padding);    
+}
+.footer{
+      grid-area: footer;
+      border-radius: var(--main-radius);
+      background-color: #7BC9FF;
+      border-radius: var(--main-radius);
+      padding: var(--main-padding);  
+}
+@media only screen and (max-width: 550px){
+      .container{
+            grid-template-columns: 1fr;
+            grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas: 
+            "nav"
+            "main"
+            "side"
+            "mencloths"
+            "ladycloths"
+            "footer";
+      }
+}
+/*This Section is about the Body Now*/
+h2,h3{
+      font-size: medium;
+      font-family: Arial, Helvetica, sans-serif;
+      padding-left: 70px;
+      color: aliceblue;;
+}
+.profile{
+      height: 130px;
+      width: 130px;
+      margin-left: 70px;
+      border-radius: 150px;
+}
+p{
+      text-align: center;
+      display: inline;
+      margin-left: 50px;
+      padding-bottom: 30px;
+      font-size:larger;
+      font-family: Arial, Helvetica, sans-serif;
+}
+.twi{
+      background-color:#5BBCFF;
+      color:white;
+      border-radius: var(--main-radius);
+      border: none;
+      cursor: pointer;
+}
+.int{
+      background-color:#FF955B;
+      color:white;
+      border-radius: var(--main-radius);
+      border: none;
+      cursor: pointer;
+}
+.fac{
+      background-color:#074173;
+      color:white;
+      border-radius: var(--main-radius);
+      border: none;
+      cursor: pointer;
+}
+.lin{
+      background-color: #1C1678;
+      color:white;
+      border-radius: var(--main-radius);
+      border: none;
+      cursor: pointer;
+}
+main img{
+      width: 174px;
+      height: 200px;
+      border-radius: var(--main-radius);
+}
+.display label{
+      margin-left: 9px;
+      color: black!important;;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: medium !important;
+}
+.x,.y,.w,.z{
+      margin-left: 100px;
+      margin-top: 10px;
+}
+.v{
+      margin-left: 30px;
+}
+.prices p{
+      font-size: small;
+      font-family: Arial, Helvetica, sans-serif;
+      text-shadow: #1679AB;
+      color: black;
+      margin-right: 25px;
+      color: blue;
+      margin-top: 1.2px;
+      margin: bottom 1.2px;
+} 
+.explain{
+      height: 550px;
+      background-image:url(bac2.jpg);
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding-top: 20px;
+      margin-top: 20px;
+}
+.explain img{
+      border-radius: 100px;
+      width: 150px;
+      height:150px;
+      position: relative;
+      animation: rotateImages 10s linear infinite;
+}
+h4{
+      font-size: medium;
+      font-family: Arial, Helvetica, sans-serif;
+      padding-left: 70px;
+      color: black;
+}
+@keyframes rotateImages {
+      from {
+      transform: rotate(0deg);
+      }
+      to {
+      transform: rotate(360deg);
+      }
+}  
+.men img{
+      width: 95%;
+      height: 350px;
+      margin-top: 10px;
+      border-radius: 20px;
+      margin-left: 20px;
+} 
+h5,h6{
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+font-size: larger;
+}
+.mencloths{
+      background-image: url(bac4.jpg);
+}
+h4{
+      color: black;
+}
+.women img{
+      width: 400px;
+      margin-left: 30px;
+      height: 350px;
+      margin-top: 10px;
+      border-radius: 100px;
+}
+form{
+      align-items: center;
+      text-align: center;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      border: #C5FF95 solid;
+}
+label{
+      display: block;
+      margin-top: 2px;
+}
+input{
+      display: block;
+      text-align: center;
+      margin-top: 5px;
+      margin-left: 200px;
+      width: 500px;
+      height: 25px;
+      border-radius: 10px;
+}
+h6{
+      color: black;
+}
+.s{
+      margin-top: 30px;
+      height: 30px;
+      background-color: #1679AB;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+}
+.dec img{
+      margin-top: 30px;
+      height: 200px;
+      width: 200px;
+      margin-left: 50px;
+      border-bottom-left-radius: 100px;
+      border-top-right-radius: 100px;
+}
