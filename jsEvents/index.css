@@ -1,0 +1,57 @@
+p,
+.x {
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0.5px 0.5px 2px 2px #ccc;
+  max-width: 700px;
+}
+.a {
+  background-color: red;
+  color: #ccc;
+  cursor: pointer;
+}
+.b {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.c {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+.d {
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+.e {
+  background-color: yellow;
+  color: black;
+  cursor: pointer;
+}
+.f {
+  background-color: violet;
+  color: white;
+  cursor: pointer;
+}
+.g {
+  background-color: #0a6847;
+  color: black;
+  cursor: pointer;
+}
+.h {
+  background-color: #0a6847;
+  color: white;
+  cursor: pointer;
+}
+.i {
+  background-color: orangered;
+  color: white;
+  cursor: pointer;
+}
+.k {
+  background-color: #0a6847;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
