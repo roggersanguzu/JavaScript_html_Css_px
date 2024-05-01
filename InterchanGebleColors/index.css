@@ -1,0 +1,54 @@
+body {
+  background-color: rgb(28, 28, 25);
+  text-align: center;
+  padding-top: 300px;
+}
+.a,
+.b,
+.c,
+.d,
+.e,
+.f,
+.g,
+.h {
+  height: 80px !important;
+  width: 80px !important;
+  color: white !important;
+  font-display: center !important;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 100px !important;
+  cursor: pointer;
+  border: none !important;
+}
+.a {
+  background-color: purple !important;
+  margin-left: 10px;
+}
+.b {
+  background-color: green !important;
+  margin-left: 10px;
+}
+.c {
+  background-color: pink !important;
+  margin-left: 10px;
+}
+.d {
+  background-color: maroon !important;
+  margin-left: 10px;
+}
+.e {
+  background-color: black !important;
+  margin-left: 10px;
+}
+.f {
+  background-color: orange !important;
+  margin-left: 10px;
+}
+.g {
+  background-color: grey !important;
+  margin-left: 10px;
+}
+.h {
+  background-color: teal !important;
+  margin-left: 10px;
+}

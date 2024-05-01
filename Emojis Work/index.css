@@ -1,0 +1,17 @@
+body {
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+#emojis {
+  font-size: 10rem !important;
+  filter: grey;
+  transition-property: transform, filter !important;
+  cursor: pointer;
+  transition-duration: 200ms !important;
+}
+#emojis:hover {
+  transform: scale(1.1);
+  filter: grayscale(0);
+}
