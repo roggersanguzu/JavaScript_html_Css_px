@@ -1,0 +1,494 @@
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "nav nav"
+    "main main"
+    "experience experience"
+    "snippets snippets"
+    "bios bios"
+    "footer footer";
+}
+nav {
+  color: white !important;
+  grid-area: nav;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  background-image: url(Photos/five.avif);
+  background-position: center;
+  background-size: cover !important;
+  transition: background-image 0.5s;
+}
+nav:hover {
+  background-image: url(Photos/six.avif);
+  background-position: center;
+  background-size: cover !important;
+  cursor: pointer;
+}
+li {
+  display: inline;
+  font-size: 1.3em;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 40px;
+}
+.actor {
+  font-size: 3em !important;
+  margin-right: 140px !important;
+  margin-left: 30px !important;
+}
+main {
+  background-image: url(Photos/three.avif);
+  background-position: center;
+  background-size: cover !important;
+  grid-area: main !important;
+  color: white !important;
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: baseline;
+}
+.experience {
+  color: white !important;
+  grid-area: experience !important;
+  background-image: url(Photos/four.avif);
+  background-position: center;
+  background-size: cover !important;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+.experience:hover .photo {
+  transform: rotateY(180deg);
+}
+.experience:hover .photi {
+  transform: rotateY(180deg);
+}
+.experience:hover .phote {
+  transform: rotateY(180deg);
+}
+.snippets {
+  color: white !important;
+  grid-area: snippets !important;
+  background-image: url(Photos/five.avif);
+  background-position: center;
+  background-size: cover !important;
+}
+.bios {
+  color: white !important;
+  grid-area: bios !important;
+  background-image: url(Photos/one.avif);
+  background-position: center;
+  background-size: cover !important;
+}
+footer {
+  color: white !important;
+  grid-area: footer !important;
+  background-image: url(Photos/two.avif);
+  background-position: center;
+  background-size: cover !important;
+}
+.w,
+.x,
+.y,
+.z {
+  border: 1px solid #ccc;
+  max-width: 45%;
+  margin-left: 30px;
+  margin-top: 30px;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  box-shadow: 2.5px 2.5px 2px 2px greenyellow;
+  transition: color 0.5s;
+  transition: transform 1s linear;
+}
+.w,
+.z {
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-image: url(Photos/five.avif);
+}
+.x,
+.y {
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.w:hover {
+  border: 2px solid #fdffc2 !important;
+  color: yellow;
+  cursor: pointer;
+}
+.x:hover {
+  border: 2px solid maroon !important;
+  color: green;
+  cursor: pointer;
+  transform: rotate(360deg);
+}
+.y:hover {
+  border: 2px solid #ccc !important;
+  color: #ca8787;
+  cursor: pointer;
+  transform: rotate(360deg);
+}
+.z:hover {
+  border: 2px solid #ccc !important;
+  color: #874ccc;
+  cursor: pointer;
+}
+.techs {
+  margin-top: 40px;
+  margin-left: 20;
+  font-size: medium;
+  font-family: Arial, Helvetica, sans-serif;
+  transform: rotate(360deg);
+}
+.techs button {
+  height: 100px;
+  width: 100px;
+  margin-left: 150px;
+  transition: transform 1s linear;
+  font-size: 1.1rem;
+  border-radius: 20px;
+}
+.techs button:hover {
+  transform: rotate(360deg);
+  cursor: pointer;
+  border: none !important;
+}
+.a {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(Photos/two.avif);
+  background-position: center;
+  background-size: cover;
+}
+.b {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(Photos/three.avif);
+  background-position: center;
+  background-size: cover;
+}
+.c {
+  background-image: url(Photos/four.avif);
+  color: white;
+  background-position: center;
+  background-size: cover;
+}
+.d {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(Photos/three.avif);
+  background-position: center;
+  background-size: cover;
+}
+.e {
+  background-image: url(Photos/six.avif);
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+.head {
+  text-align: center;
+  margin-left: 120px;
+  transition: transform 1s linear;
+  margin-bottom: 50px;
+}
+.head:hover {
+  transform: rotate(360deg);
+  cursor: pointer;
+}
+
+.git,
+.jrs,
+.linkedin {
+  height: 300px;
+  width: 30%;
+  border: 1px solid maroon;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  box-shadow: 1.5px 2.5px 2px 2px maroon;
+  cursor: pointer;
+}
+.git {
+  margin-left: 40px;
+}
+.photo,
+.photi,
+.phote {
+  height: 200px;
+  width: 200px;
+  border: 2px solid #ccc;
+  float: left;
+  border-radius: 100px;
+  transition: transform 0.5s;
+}
+.photo {
+  background-image: url(Photos/p2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.photi {
+  background-image: url(Photos/p4.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.phote {
+  background-image: url(Photos/p3.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.photoo,
+.photii,
+.photee {
+  height: 300px;
+  width: 200px;
+  border: 2px solid #ccc;
+  float: right;
+  transition: transform 0.5s;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+a {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-left: 60px;
+  color: #ccc;
+  margin-top: 20px;
+}
+.heax {
+  margin-left: 600px;
+}
+.l,
+.m,
+.n,
+.o {
+  height: 100px;
+  margin-left: 150px;
+  min-width: 150px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  cursor: pointer;
+  color: white;
+}
+.l {
+  background-image: url(Photos/four.avif);
+  background-position: center;
+  background-size: cover;
+}
+.m {
+  background-image: url(Photos/three.avif);
+  background-position: center;
+  background-size: cover;
+}
+.n {
+  background-image: url(Photos/five.avif);
+  background-position: center;
+  background-size: cover;
+}
+.o {
+  background-image: url(Photos/six.avif);
+  background-position: center;
+  background-size: cover;
+}
+.snippets img {
+  width: 30%;
+  height: 400px;
+  margin-left: 30px;
+  transition: height 0.8s;
+  border: 1px solid magenta;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.snippets img:hover {
+  height: 600px;
+  cursor: pointer;
+  border-radius: 50px;
+  box-shadow: 0.5px 0.5px 2px 2px greenyellow;
+}
+
+.bios button {
+  margin-left: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 40px;
+  width: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  border-radius: 100px;
+  transition: width 1.5s;
+}
+.bios button:hover {
+  width: 200px;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 2px greenyellow;
+}
+.kali {
+  color: white;
+  background-color: #1da1f2;
+  border: none;
+}
+.kalii {
+  color: white;
+  background-color: #0077b5;
+  border: none;
+}
+.kaliii {
+  color: white;
+  background-color: rgb(228, 64, 95);
+  border: none;
+}
+.kaliiii {
+  color: white;
+  background-color: #2b3137;
+  border: none;
+}
+.kaliiiii {
+  color: white;
+  background-color: #1877f2;
+  border: none;
+}
+.kaliiiiii {
+  color: white;
+  background-color: #c8232c;
+  border: none;
+}
+
+footer {
+  text-align: center;
+  height: 200px;
+  padding-top: 10px;
+  font-size: 1.5rem;
+}
+.j {
+  margin-top: 5px;
+  font-size: 5rem;
+  transition: font-size 0.8s;
+}
+.j:hover {
+  font-size: 7rem;
+  cursor: pointer;
+}
+.disp {
+  font-size: small;
+  display: none;
+  position: absolute;
+  min-width: 100px;
+  background-image: url(Photos/p4.jpg);
+  box-shadow: 0.5px 0.5px 2px 2px black;
+  z-index: 1;
+  margin-left: 600px;
+  padding: 0px;
+  padding-right: 30px;
+  border-radius: 10px;
+  border: solid white;
+}
+.disp li {
+  display: block;
+  color: white;
+}
+.home:hover .disp {
+  display: block;
+}
+.display {
+  font-size: small;
+  display: none;
+  position: absolute;
+  min-width: 100px;
+  background-image: url(Photos/p4.jpg);
+  box-shadow: 0.5px 0.5px 2px 2px black;
+  z-index: 1;
+  margin-left: 670px;
+  padding-right: 30px;
+  border-radius: 10px;
+  border: solid white;
+}
+.display li {
+  display: block;
+  color: white;
+}
+.project:hover .display {
+  display: block;
+}
+.displaya {
+  font-size: small;
+  display: none;
+  position: absolute;
+  min-width: 100px;
+  background-image: url(Photos/p4.jpg);
+  box-shadow: 0.5px 0.5px 2px 2px black;
+  z-index: 1;
+  margin-left: 750px;
+  padding-right: 30px;
+  border-radius: 10px;
+  border: solid white;
+}
+.displaya li {
+  display: block;
+  color: white;
+}
+.resume:hover .displaya {
+  display: block;
+}
+
+.displayee {
+  font-size: small;
+  display: none;
+  position: absolute;
+  min-width: 100px;
+  background-image: url(Photos/p4.jpg);
+  box-shadow: 0.5px 0.5px 2px 2px black;
+  z-index: 1;
+  margin-left: 850px;
+  padding-right: 30px;
+  border-radius: 10px;
+  border: solid white;
+}
+.displayee li {
+  display: block;
+  color: white;
+}
+.technologies:hover .displayee {
+  display: block;
+}
+
+.displayeee {
+  font-size: small;
+  display: none;
+  position: absolute;
+  min-width: 100px;
+  background-image: url(Photos/p4.jpg);
+  box-shadow: 0.5px 0.5px 2px 2px black;
+  z-index: 1;
+  margin-left: 1000px;
+  padding-right: 30px;
+  border-radius: 10px;
+  border: solid white;
+}
+.displayeee li {
+  display: block;
+  color: white;
+}
+.about:hover .displayeee {
+  display: block;
+}
+@media only screen and(max-width:992px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "main"
+      "experience"
+      "snippets"
+      "bios "
+      "footer";
+  }
+}
