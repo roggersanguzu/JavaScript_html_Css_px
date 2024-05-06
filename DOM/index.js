@@ -1,4 +1,4 @@
-console.log(document.getElementsByTagName("h1"));
+console.log(document.getElementsByTagName("h1")); //This demacates the process of getting an element based on its TagName
 console.log(document.getElementsByTagName("h2"));
 console.log(document.getElementById("miana"));
 console.log(document.getElementsByClassName("clas"));
@@ -18,3 +18,4 @@ console.log(y);
 
 const z = document.querySelector(".three");
 console.log(z);
+
