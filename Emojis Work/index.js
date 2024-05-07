@@ -1,3 +1,4 @@
+//The main idea is for the emojis to change rangdomly When ever the user hover over it
 var emojis = [
   "😊",
   "❤️",
