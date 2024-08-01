@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            transition: 0.35s;
+            cursor: pointer;
+        }
+        button{
+           padding: 1rem 2rem;
+            border-radius: 2rem;
+            color: blue;
+            background-color: cadetblue;
+            cursor: pointer;
+            border: none;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1 class="kichwa">WEB LISTERNERS AND EVENT HANDLERS</h1>
+    <button class="det">Changer</button>
+    <button class="changer">Back</button>
+
+    
+    <script>
+        var z=document.querySelector(".changer");
+        var y=document.querySelector(".det");
+        var x=document.querySelector(".kichwa");
+        var date=new Date();
+        
+        y.addEventListener("click",()=>{
+            alert("You Dude WhatsApp");
+            if(x.innerHTML==="You Have Clicked On Me"){
+                x.innerHTML="WEB LISTERNERS AND EVENT HANDLERS";
+            }
+            else{
+                x.innerHTML="You Have Clicked On Me";
+            }  
+        })
+        x.addEventListener("mouseover",()=>{
+            if(x.innerHTML=== "WEB LISTERNERS AND EVENT HANDLERS"){
+                x.innerHTML="You Have Moved your Mouse Over Me";
+            }
+        })
+        x.addEventListener("mouseout",()=>{
+            if(x.innerHTML=== "You Have Moved your Mouse Over Me"){
+                x.innerHTML="WEB LISTERNERS AND EVENT HANDLERS";
+            }
+        })
+        z.addEventListener("click",()=>{
+
+            if(document.body.style.color==="white" && document.body.style.backgroundColor==="blue"){
+                document.body.style.color="black";
+                document.body.style.backgroundColor="white";
+            }
+            else if(document.body.style.color==="black" && document.body.style.backgroundColor==="white"){
+                document.body.style.color="yellow";
+                document.body.style.backgroundColor="black";
+            }
+            else if(document.body.style.color==="yellow" && document.body.style.backgroundColor==="black"){
+                document.body.style.color="black";
+                document.body.style.backgroundColor="pink";
+            }
+            else if(document.body.style.color==="black" && document.body.style.backgroundColor==="pink"){
+                document.body.style.color="orange";
+                document.body.style.backgroundColor="green";
+            }
+            else if(document.body.style.color==="orange" && document.body.style.backgroundColor==="green"){
+                document.body.style.color="purple";
+                document.body.style.backgroundColor="white";
+            }
+            
+            else{
+                document.body.style.color="white";
+                document.body.style.backgroundColor="blue";
+            }    
+        },6000)
+    </script>
+</body>
+</html>
